@@ -1,4 +1,3 @@
-import React from "react";
 import forest from "../assets/forest.jpg";
 
 export default function BannerPlantio() {
