@@ -1,7 +1,5 @@
-import React from "react";
-
-import logo from "/home/mateus/Amadeo/Amadeo/src/assets/amadeo-horizontal.png";
-import tractorImage from "/home/mateus/Amadeo/Amadeo/src/assets/Pasted-image.png";
+import logo from "../assets/amadeo-horizontal.png";
+import tractorImage from "../assets/Pasted-image.png";
 
 const GREEN = "#65B33BE5";
 const TEXT_COLOR = "#FFFFFF";
