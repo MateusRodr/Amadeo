@@ -1,0 +1,211 @@
+{
+  "navbar": {
+    "homeAriaLabel": "Página inicial",
+    "openMenuAriaLabel": "Abrir menu",
+    "closeMenuAriaLabel": "Fechar menu",
+
+    "links": {
+      "about": "Sobre",
+      "services": "Serviços",
+      "differentials": "Diferenciais",
+      "sustainability": "Sustentabilidade"
+    },
+    "contact": "Entre em contato"
+  },
+  "hero": {
+    "imageAlt": "Trator trabalhando em uma área agrícola",
+    "titleStart": "Serviços",
+    "titleHighlight": "Florestais e Agrícolas",
+    "titleEnd": "com Eficiência e Experiência",
+    "description": "Soluções completas para campo e floresta, com tecnologia, segurança e compromisso com resultados sustentáveis.",
+    "servicesAction": "Conheça nossos serviços",
+    "contactAction": "Fale conosco"
+  },
+  "about": {
+    "largeImageAlt": "Operação agrícola da Amadeo",
+    "smallImageAlt": "Trator trabalhando no campo",
+    "experienceNumber": "09+",
+    "experienceLabelStart": "anos de",
+    "experienceLabelEnd": "experiência",
+    "eyebrow": "Quem somos",
+    "title": "Experiência que transforma o campo",
+    "description": "A Amadeo Serviços Agroflorestais é uma empresa especializada em soluções florestais e agrícolas, com foco em qualidade, eficiência e sustentabilidade.",
+    "highlights": {
+      "experience": "Experiência comprovada",
+      "quality": "Compromisso com a qualidade",
+      "responsibility": "Responsabilidade socioambiental"
+    },
+    "contactAction": "Fale conosco"
+  },
+  "history": {
+    "eyebrow": "Nossa história",
+    "title": "Foi com apenas um trator que tudo começou...",
+    "items": {
+      "foundation": {
+        "title": "Nascemos em 2013",
+        "description": "A Amadeo Serviços Agroflorestais nasceu em 2013, fruto do sonho, da determinação e do espírito empreendedor de Amadeo Rodrigues da Silva Neto."
+      },
+      "beginning": {
+        "title": "Como tudo começou",
+        "description": "Tudo começou com um único trator New Holland 5600 e muita disposição para trabalhar."
+      },
+      "growth": {
+        "title": "Crescemos com propósito",
+        "description": "Desde então, seguimos crescendo, investindo em equipamentos, tecnologia e, principalmente, pessoas. Hoje, oferecemos soluções agroflorestais completas, com qualidade, segurança e compromisso em cada serviço prestado."
+      }
+    }
+  },
+  "services": {
+    "eyebrow": "Nossos serviços",
+    "title": "Atuação de alta performance",
+    "description": "Especializada na prestação de serviços para o setor agrícola e florestal, atendemos produtores e empresas que buscam eficiência, organização e qualidade em suas operações.",
+    "items": {
+      "clearing": {
+        "name": "Limpeza de área",
+        "subtitle": "Remoção e desimpedimento",
+        "title": "Preparação de áreas para novos projetos produtivos",
+        "description": "Realizamos serviços de limpeza de áreas destinados à preparação do terreno para atividades agrícolas e florestais. A operação é executada com planejamento e eficiência, garantindo que o local esteja adequado para as próximas etapas de implantação ou manejo."
+      },
+      "soilPreparation": {
+        "name": "Preparo de solo",
+        "subtitle": "Condicionamento e estruturação",
+        "title": "Base estruturada para alta eficiência",
+        "description": "Executamos o preparo do solo com técnicas adequadas para proporcionar melhores condições de desenvolvimento para culturas agrícolas e florestais."
+      },
+      "planting": {
+        "name": "Plantio",
+        "subtitle": "Semeio e estabelecimento",
+        "title": "Implantação eficiente para o desenvolvimento da área",
+        "description": "Realizamos operações de plantio com planejamento e cuidado em cada etapa, buscando uniformidade, eficiência e melhores condições de desenvolvimento."
+      },
+      "forestryManagement": {
+        "name": "Manejo florestal",
+        "subtitle": "Uso sustentável",
+        "title": "Manejo responsável dos recursos florestais",
+        "description": "Atuamos no manejo florestal com foco em eficiência operacional, responsabilidade ambiental e aproveitamento sustentável dos recursos."
+      },
+      "agriculturalManagement": {
+        "name": "Manejo agrícola",
+        "subtitle": "Tratamento e cultivo contínuo",
+        "title": "Cuidado contínuo para melhores resultados",
+        "description": "Executamos atividades de manejo agrícola voltadas à manutenção e ao desenvolvimento das áreas produtivas."
+      },
+      "fleetLeasing": {
+        "name": "Locação de frota",
+        "subtitle": "Equipamentos de alta tecnologia para máxima produtividade",
+        "title": "Soluções de locação para sua operação",
+        "description": "Disponibilizamos frotas modernas de tratores, caminhões, maquinas e implementos para operações agrícolas e florestais. Garantimos equipamentos revisados, alto rendimento operacional e suporte especializado para manter sua produção continua e sem paradas."
+      }
+    }
+  },
+  "differentials": {
+    "eyebrow": "Diferenciais",
+    "title": "O que nos torna a escolha certa",
+    "description": "Processos eficientes e focados em resultados que geram valor para o seu negócio. Nossa atuação busca equilibrar produtividade, sustentabilidade e cuidado com o meio ambiente.",
+    "items": {
+      "performance": {
+        "title": "Alta performance",
+        "description": "Processos eficientes e focados em resultados que geram valor para seu negócio."
+      },
+      "team": {
+        "title": "Equipe especializada",
+        "description": "Profissionais experientes e capacitados para entregar o melhor em cada detalhe."
+      },
+      "equipment": {
+        "title": "Equipamentos modernos",
+        "description": "Frota com tecnologia de ponta para garantir agilidade e precisão nos serviços."
+      },
+      "sustainability": {
+        "title": "Sustentabilidade",
+        "description": "Atuamos com responsabilidade ambiental, preservando recursos e o futuro."
+      }
+    },
+    "images": {
+      "equipmentOperationAlt": "Equipamentos da Amadeo em operação",
+      "soilPreparationAlt": "Trator trabalhando no preparo do solo",
+      "agriculturalEquipmentAlt": "Equipamento agrícola da Amadeo"
+    }
+  },
+  "sustainability": {
+    "eyebrow": "Compromisso ambiental",
+    "titleStart": "Ações concretas",
+    "titleHighlight": "para um futuro",
+    "titleEnd": "sustentável",
+    "description": "Na Amadeo Serviços Agroflorestais, cada projeto é planejado para gerar resultados hoje e valor duradouro para o futuro. Nossa atuação combina tecnologia, experiência e respeito ao meio ambiente.",
+    "items": {
+      "resources": {
+        "title": "Uso responsável dos recursos naturais",
+        "description": "Planejamos e executamos nossas atividades com foco na eficiência do uso de recursos, reduzindo impactos e promovendo o equilíbrio ambiental."
+      },
+      "efficiency": {
+        "title": "Eficiência produtiva",
+        "description": "Através de técnicas modernas e equipe especializada, aumentamos a produtividade com responsabilidade e inteligência no manejo."
+      },
+      "conservation": {
+        "title": "Conservação ambiental",
+        "description": "Atuamos na proteção da biodiversidade e na manutenção de áreas nativas, contribuindo para ecossistemas saudáveis e produtivos."
+      },
+      "development": {
+        "title": "Desenvolvimento sustentável",
+        "description": "Promovemos soluções que geram valor econômico, social e ambiental, contribuindo para um futuro mais equilibrado."
+      }
+    },
+    "practice": {
+      "imageAlt": "Profissional trabalhando em ação ambiental",
+      "eyebrow": "Resultado que permanece",
+      "title": "Sustentabilidade na prática",
+      "description": "Nosso compromisso vai além do presente. Desenvolvemos soluções responsáveis que conciliam alta produtividade e preservação ambiental, gerando resultados sólidos hoje e construindo um legado sustentável para o amanhã.",
+      "contactAction": "Entre em contato"
+    }
+  },
+  "workProcess": {
+    "eyebrow": "Como trabalhamos",
+    "title": "Transparência e rigor técnico",
+    "description": "Seguimos um fluxo de trabalho estruturado para entregar máxima precisão. Cada etapa é conduzida por especialistas, garantindo controle total, acompanhamento contínuo e resultados alinhados aos seus objetivos.",
+    "steps": {
+      "diagnosis": {
+        "title": "Diagnóstico",
+        "description": "Entendimento da propriedade, necessidade e objetivos da operação."
+      },
+      "planning": {
+        "title": "Planejamento",
+        "description": "Definição das estratégias e soluções adequadas para o ambiente e o serviço."
+      },
+      "execution": {
+        "title": "Execução",
+        "description": "Aplicação das soluções com acompanhamento técnico dos nossos especialistas."
+      },
+      "monitoring": {
+        "title": "Monitoramento",
+        "description": "Avaliação dos resultados, monitoramento e acompanhamento contínuo."
+      }
+    },
+    "cta": {
+      "title": "Pronto para transformar sua operação?",
+      "description": "Entre em contato com a equipe Amadeo e descubra como podemos ajudar no seu projeto agroflorestal.",
+      "action": "Solicitar orçamento"
+    }
+  },
+  "contact": {
+    "eyebrow": "Contato",
+    "title": "Tire dúvidas ou solicite um orçamento",
+    "description": "Estamos prontos para entender as necessidades do seu negócio e apresentar as melhores soluções agrícolas e florestais para a sua região.",
+    "labels": {
+      "phone": "Telefone",
+      "email": "E-mail"
+    },
+    "form": {
+      "name": "Nome",
+      "email": "E-mail",
+      "phone": "Telefone",
+      "message": "Mensagem",
+      "submit": "Solicitar contato"
+    }
+  },
+  "footer": {
+    "contactAction": "Fale conosco",
+    "projectsAction": "Ver projetos",
+    "address": "Rua Maria Aparecida de Jesus Mira, n. 506, Jardim das Palmeiras II - Água Clara, MS",
+    "copyright": "© 2026 Amadeo Serviços Agroflorestais"
+  }
+}
