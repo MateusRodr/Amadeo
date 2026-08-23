@@ -199,7 +199,11 @@
       "email": "E-mail",
       "phone": "Telefone",
       "message": "Mensagem",
-      "submit": "Solicitar contato"
+      "submit": "Solicitar contato",
+      "sending": "Enviando...",
+      "success": "Mensagem enviada com sucesso!",
+      "error": "Não foi possível enviar a mensagem. Tente novamente.",
+      "required": "Preencha todos os campos obrigatórios."
     }
   },
   "footer": {

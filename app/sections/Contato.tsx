@@ -1,9 +1,60 @@
+import { useState } from "react";
 import { Mail, Phone } from "lucide-react";
-import { FaInstagram } from 'react-icons/fa';
+import { FaInstagram } from "react-icons/fa";
 import { useTranslation } from "react-i18next";
 
 export default function Contato() {
   const { t } = useTranslation("landing");
+
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [status, setStatus] = useState<"success" | "error" | "required" | null>(
+    null,
+  );
+
+  async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+
+    const form = event.currentTarget;
+    const formData = new FormData(form);
+
+    const payload = {
+      name: String(formData.get("name") ?? "").trim(),
+      email: String(formData.get("email") ?? "").trim(),
+      phone: String(formData.get("phone") ?? "").trim(),
+      message: String(formData.get("message") ?? "").trim(),
+    };
+
+    if (!payload.name || !payload.email || !payload.phone || !payload.message) {
+      setStatus("required");
+      return;
+    }
+
+    try {
+      setIsSubmitting(true);
+      setStatus(null);
+
+      const response = await fetch("/api/send-contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(payload),
+      });
+
+      if (!response.ok) {
+        throw new Error("Erro ao enviar mensagem");
+      }
+
+      form.reset();
+      setStatus("success");
+    } catch (error) {
+      console.error(error);
+      setStatus("error");
+    } finally {
+      setIsSubmitting(false);
+    }
+  }
+
   const contacts = [
     {
       label: t("contact.labels.phone"),
@@ -205,7 +256,11 @@ export default function Contato() {
             lg:p-10
           "
         >
-          <form className="flex flex-col gap-6">
+          <form
+            className="flex flex-col gap-6"
+            onSubmit={handleSubmit}
+            noValidate
+          >
             <div>
               <label
                 htmlFor="name"
@@ -224,6 +279,7 @@ export default function Contato() {
                 id="name"
                 name="name"
                 type="text"
+                required
                 className="
                   h-12
                   w-full
@@ -259,6 +315,7 @@ export default function Contato() {
                 id="email"
                 name="email"
                 type="email"
+                required
                 className="
                   h-12
                   w-full
@@ -294,6 +351,7 @@ export default function Contato() {
                 id="phone"
                 name="phone"
                 type="tel"
+                required
                 className="
                   h-12
                   w-full
@@ -329,6 +387,7 @@ export default function Contato() {
                 id="message"
                 name="message"
                 rows={5}
+                required
                 className="
                   w-full
                   resize-none
@@ -349,6 +408,7 @@ export default function Contato() {
 
             <button
               type="submit"
+              disabled={isSubmitting}
               className="
                 w-fit
                 rounded-full
@@ -365,11 +425,32 @@ export default function Contato() {
                 hover:brightness-95
                 hover:shadow-md
 
+                disabled:cursor-not-allowed
+                disabled:opacity-60
+
                 cursor-pointer
               "
             >
-              {t("contact.form.submit")}
+              {isSubmitting
+                ? t("contact.form.sending")
+                : t("contact.form.submit")}
             </button>
+            {status === "success" && (
+              <p className="text-sm font-medium text-[#65B33B]">
+                {t("contact.form.success")}
+              </p>
+            )}
+            {status === "required" && (
+              <p className="text-sm font-medium text-red-600">
+                {t("contact.form.required")}
+              </p>
+            )}
+
+            {status === "error" && (
+              <p className="text-sm font-medium text-red-600">
+                {t("contact.form.error")}
+              </p>
+            )}
           </form>
         </div>
       </div>
