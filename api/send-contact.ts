@@ -8,6 +8,7 @@ if (!apiKey) {
 }
 
 const resend = new Resend(apiKey)
+
 export default async function handler(
   req: VercelRequest,
   res: VercelResponse
@@ -29,23 +30,61 @@ export default async function handler(
   try {
     const { data, error } = await resend.emails.send({
       from: 'Amadeo <onboarding@resend.dev>',
+
+      // Temporário para testes.
+      // Depois trocar pelos e-mails oficiais da Amadeo.
       to: ['mr5508113@gmail.com'],
+
       replyTo: email,
-      subject: 'Novo contato pelo site Amadeo',
+
+      subject:
+        'Nova solicitação de contato pelo site – Amadeo Serviços Agroflorestais',
+
       html: `
-        <h2>Novo contato pelo site Amadeo</h2>
+        <div
+          style="
+            font-family: Arial, sans-serif;
+            color: #333333;
+            line-height: 1.6;
+          "
+        >
+          <p>
+            Olá, uma nova solicitação de contato foi enviada através do site da
+            Amadeo Serviços Agroflorestais.
+          </p>
 
-        <p><strong>Nome:</strong> ${name}</p>
-        <p><strong>E-mail:</strong> ${email}</p>
-        <p><strong>Telefone:</strong> ${phone}</p>
+          <h3>Dados do visitante</h3>
 
-        <p><strong>Mensagem:</strong></p>
-        <p>${message}</p>
+          <p>
+            <strong>Nome:</strong> ${name}
+          </p>
+
+          <p>
+            <strong>E-mail:</strong> ${email}
+          </p>
+
+          <p>
+            <strong>Telefone:</strong> ${phone}
+          </p>
+
+          <p>
+            <strong>Mensagem:</strong>
+          </p>
+
+          <p>${message}</p>
+
+          <hr />
+
+          <p>
+            O visitante está aguardando um retorno. Entrem em contato através
+            do telefone ou e-mail informado acima.
+          </p>
+        </div>
       `
     })
 
     if (error) {
-      console.error(error)
+      console.error('[Resend API Error]:', error)
 
       return res.status(500).json({
         message: 'Erro ao enviar e-mail'
@@ -57,7 +96,7 @@ export default async function handler(
       data
     })
   } catch (error) {
-    console.error(error)
+    console.error('[Send Contact Error]:', error)
 
     return res.status(500).json({
       message: 'Erro ao enviar e-mail'
