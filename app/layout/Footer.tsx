@@ -2,7 +2,7 @@ import { Mail, MapPin, Phone } from "lucide-react";
 import { FaInstagram } from 'react-icons/fa';
 import { useTranslation } from "react-i18next";
 
-import logo from "../assets/images/amadeo-horizontal.png";
+import logo from "../assets/images/logo-amadeo-dark-bg.png";
 
 export default function Footer() {
   const { t } = useTranslation("landing");

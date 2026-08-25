@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
-import logo from "../assets/images/logo.png";
+import logo from "../assets/images/logo-amadeo-dark-bg.png";
 
 export default function Navbar() {
   const { t } = useTranslation("landing");
