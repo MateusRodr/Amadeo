@@ -11,6 +11,7 @@ export default function Navbar() {
   const navigation = [
     { label: t("navbar.links.about"), href: "#sobre" },
     { label: t("navbar.links.services"), href: "#servicos" },
+    { label: t("navbar.links.workSafety"), href: "#seguranca" },
     { label: t("navbar.links.differentials"), href: "#diferenciais" },
     { label: t("navbar.links.sustainability"), href: "#sustentabilidade" },
   ];

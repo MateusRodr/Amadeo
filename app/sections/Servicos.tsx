@@ -1,10 +1,10 @@
 import { useState } from "react";
-import { BrushCleaning, Sprout, Trees, Tractor } from "lucide-react";
+import { BrushCleaning, Sprout, Trees, Tractor, Shovel } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
 import tratorone from "../assets/images/tratorone.png";
 import trator from "../assets/images/trator.png";
-import plantio from "../assets/images/plantio.jpg";
+import forest from "../assets/images/forest.jpg"
 import manejoFlorestal from "../assets/images/manejo-florestal.jpg";
 import manejo from "../assets/images/manejo-florestal.jpg";
 
@@ -17,7 +17,7 @@ export default function AtuacaoAltaPerformance() {
       subtitle: t("services.items.clearing.subtitle"),
       title: t("services.items.clearing.title"),
       description: t("services.items.clearing.description"),
-      image: tratorone,
+      image: trator,
       icon: BrushCleaning,
     },
     {
@@ -26,8 +26,8 @@ export default function AtuacaoAltaPerformance() {
       subtitle: t("services.items.soilPreparation.subtitle"),
       title: t("services.items.soilPreparation.title"),
       description: t("services.items.soilPreparation.description"),
-      image: trator,
-      icon: Tractor,
+      image: tratorone,
+      icon: Shovel,
     },
     {
       id: "plantio",
@@ -35,7 +35,7 @@ export default function AtuacaoAltaPerformance() {
       subtitle: t("services.items.planting.subtitle"),
       title: t("services.items.planting.title"),
       description: t("services.items.planting.description"),
-      image: plantio,
+      image: forest,
       icon: Sprout,
     },
     {

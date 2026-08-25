@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.tsx'
 import i18nReady from './i18n'
-import '../app/utils/index.css' 
+import '../app/styles/index.css' 
 
 await i18nReady
 
