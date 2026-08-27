@@ -5,7 +5,7 @@ import plantio from "../assets/images/plantio.jpg";
 import tratores from "../assets/images/tratores.jpg";
 
 function getYearsOfExperience() {
-  const foundedYear = 2017;
+  const foundedYear = 2013;
   const anniversaryMonth = 4;
   const anniversaryDay = 31;
 

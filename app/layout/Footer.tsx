@@ -1,11 +1,15 @@
 import { Mail, MapPin, Phone } from "lucide-react";
-import { FaInstagram } from 'react-icons/fa';
+import { FaInstagram } from "react-icons/fa";
 import { useTranslation } from "react-i18next";
 
 import logo from "../assets/images/logo-amadeo-dark-bg.png";
 
 export default function Footer() {
   const { t } = useTranslation("landing");
+  const currentYear = new Date().getFullYear();
+
+  const whatsappUrl =
+    "https://wa.me/556798329788?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es";
 
   return (
     <footer
@@ -59,7 +63,9 @@ export default function Footer() {
             "
           >
             <a
-              href="#contato"
+              href={whatsappUrl}
+              target="_blank"
+              rel="noreferrer"
               className="
                 inline-flex
                 items-center
@@ -82,7 +88,9 @@ export default function Footer() {
             </a>
 
             <a
-              href="#projetos"
+              href={whatsappUrl}
+              target="_blank"
+              rel="noreferrer"
               className="
                 inline-flex
                 items-center
@@ -207,6 +215,8 @@ export default function Footer() {
               "
             >
               {t("footer.address")}
+              <br />
+              {t("footer.CEP")}
             </p>
           </div>
         </div>
@@ -234,7 +244,12 @@ export default function Footer() {
           "
         >
           <p className="text-[12px] text-white/90">
-            {t("footer.copyright")}
+            {t("footer.copyright", { year: currentYear })}
+          </p>
+          <p className="max-w-[280px] text-[13px] leading-[1.4]">
+            {t("footer.address")}
+            <br />
+            {t("footer.CEP")}
           </p>
 
           <a

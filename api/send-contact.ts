@@ -33,7 +33,7 @@ export default async function handler(
 
       // Temporário para testes.
       // Depois trocar pelos e-mails oficiais da Amadeo.
-      to: ['mr5508113@gmail.com'],
+      to: ['karen@amadeoagroflorestal.com.br'],
 
       replyTo: email,
 

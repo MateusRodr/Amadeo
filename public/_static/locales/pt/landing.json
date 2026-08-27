@@ -25,7 +25,6 @@
   "about": {
     "largeImageAlt": "Operação agrícola da Amadeo",
     "smallImageAlt": "Trator trabalhando no campo",
-    "experienceNumber": "09+",
     "experienceLabelStart": "anos de",
     "experienceLabelEnd": "experiência",
     "eyebrow": "Quem somos",
@@ -226,6 +225,7 @@
     "contactAction": "Fale conosco",
     "projectsAction": "Ver projetos",
     "address": "Rua Maria Aparecida de Jesus Mira, n. 506, Jardim das Palmeiras II - Água Clara, MS",
-    "copyright": "© 2026 Amadeo Serviços Agroflorestais"
+    "CEP": "CEP 79.681-103",
+    "copyright": "© {{year}} Amadeo Serviços Agroflorestais"
   }
 }

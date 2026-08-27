@@ -1,12 +1,13 @@
 import { useState } from "react";
-import { BrushCleaning, Sprout, Trees, Tractor, Shovel } from "lucide-react";
+import { BrushCleaning, Sprout, Trees, Tractor, Shovel, Wheat } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
 import tratorone from "../assets/images/tratorone.png";
 import trator from "../assets/images/trator.png";
 import forest from "../assets/images/forest.jpg"
 import manejoFlorestal from "../assets/images/manejo-florestal.jpg";
-import manejo from "../assets/images/manejo-florestal.jpg";
+import limpeza from "../assets/images/limpeza-de-area.png"
+import agricola from "../assets/images/11-agricola-servicos.png"
 
 export default function AtuacaoAltaPerformance() {
   const { t } = useTranslation("landing");
@@ -17,7 +18,7 @@ export default function AtuacaoAltaPerformance() {
       subtitle: t("services.items.clearing.subtitle"),
       title: t("services.items.clearing.title"),
       description: t("services.items.clearing.description"),
-      image: trator,
+      image: limpeza,
       icon: BrushCleaning,
     },
     {
@@ -53,8 +54,8 @@ export default function AtuacaoAltaPerformance() {
       subtitle: t("services.items.agriculturalManagement.subtitle"),
       title: t("services.items.agriculturalManagement.title"),
       description: t("services.items.agriculturalManagement.description"),
-      image: manejo,
-      icon: Sprout,
+      image: agricola,
+      icon: Wheat,
     },
     {
       id:"Locação de frota",

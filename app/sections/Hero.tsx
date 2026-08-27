@@ -1,10 +1,13 @@
-import { MessageCircle } from "lucide-react";
+import { FaWhatsapp } from "react-icons/fa";
 import { useTranslation } from "react-i18next";
 
 import tractorImg from "../assets/images/Pasted-image.png";
 
 export default function AmadeoHero() {
   const { t } = useTranslation("landing");
+
+  const whatsappUrl =
+    "https://wa.me/556798329788?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es";
 
   return (
     <section
@@ -142,7 +145,9 @@ export default function AmadeoHero() {
             </a>
 
             <a
-              href="#contato"
+              href={whatsappUrl}
+              target="_blank"
+              rel="noreferrer"
               className="
                 flex
                 items-center
@@ -161,7 +166,7 @@ export default function AmadeoHero() {
               "
             >
               {t("hero.contactAction")}
-              <MessageCircle size={17} strokeWidth={1.8} />
+              <FaWhatsapp size={17} strokeWidth={1.8} />
             </a>
           </div>
         </div>

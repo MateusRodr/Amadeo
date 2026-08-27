@@ -1,9 +1,9 @@
 import { House, Lightbulb, Sprout } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
-import historiaInicio from "../assets/images/plantio.jpg";
 import tratorNewHolland from "../assets/images/tratores.jpg";
-import floresta from "../assets/images/manejo-florestal.jpg";
+import historia from "../assets/images/2013.png"
+import Diferenciais from "../assets/images/16-diferenciais.png";
 
 export default function NossaHistoria() {
   const { t } = useTranslation("landing");
@@ -11,7 +11,7 @@ export default function NossaHistoria() {
     {
       title: t("history.items.foundation.title"),
       description: t("history.items.foundation.description"),
-      image: historiaInicio,
+      image: historia,
       icon: Lightbulb,
     },
     {
@@ -23,7 +23,7 @@ export default function NossaHistoria() {
     {
       title: t("history.items.growth.title"),
       description: t("history.items.growth.description"),
-      image: floresta,
+      image: Diferenciais,
       icon: House,
     },
   ];
