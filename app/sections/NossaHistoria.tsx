@@ -1,12 +1,14 @@
+import { useState } from "react";
 import { House, Lightbulb, Sprout } from "lucide-react";
 import { useTranslation } from "react-i18next";
-
-import tratorNewHolland from "../assets/images/tratores.jpg";
-import historia from "../assets/images/2013.png"
-import Diferenciais from "../assets/images/16-diferenciais.png";
+import start from "../assets/images/05-comeco-nossa-historia.png";
+import historia from "../assets/images/2013.png";
+import grow from "../assets/images/06-crescecmos-nossa-historia.png";
 
 export default function NossaHistoria() {
   const { t } = useTranslation("landing");
+  const [activeIndex, setActiveIndex] = useState(1);
+
   const historyItems = [
     {
       title: t("history.items.foundation.title"),
@@ -17,13 +19,13 @@ export default function NossaHistoria() {
     {
       title: t("history.items.beginning.title"),
       description: t("history.items.beginning.description"),
-      image: tratorNewHolland,
+      image: start,
       icon: Sprout,
     },
     {
       title: t("history.items.growth.title"),
       description: t("history.items.growth.description"),
-      image: Diferenciais,
+      image: grow,
       icon: House,
     },
   ];
@@ -75,18 +77,17 @@ export default function NossaHistoria() {
 
         <div
           className="
-            flex
-            gap-5
-            overflow-x-auto
-            pb-4
-            snap-x
-            snap-mandatory
+              flex
+              gap-5
+              overflow-x-auto
+              pb-4
+              snap-x
+              snap-mandatory
 
-            md:grid
-            md:grid-cols-[1.6fr_0.75fr_0.75fr]
-            md:overflow-visible
-            md:pb-0
-          "
+              md:h-[330px]
+              md:overflow-visible
+              md:pb-0
+            "
         >
           {historyItems.map((item, index) => {
             const Icon = item.icon;
@@ -94,39 +95,39 @@ export default function NossaHistoria() {
             return (
               <article
                 key={item.title}
+                onMouseEnter={() => setActiveIndex(index)}
+                onFocus={() => setActiveIndex(index)}
+                tabIndex={0}
                 className={`
-                  group
-                  relative
-                  shrink-0
-                  snap-start
-                  overflow-hidden
-                  rounded-[24px]
-                  bg-[#111111]
-                  transition-all
-                  duration-500
-                  ease-out
+                      group
+                      relative
+                      min-h-[370px]
+                      w-[315px]
+                      shrink-0
+                      snap-start
+                      overflow-hidden
+                      rounded-[24px]
+                      bg-[#111111]
+                      cursor-pointer
+                      outline-none
 
-                  w-[315px]
-                  min-h-[370px]
+                      transition-all
+                      duration-700
+                      ease-in-out
 
-                  md:w-auto
-                  md:min-h-[310px]
+                      md:min-h-[330px]
+                      md:w-auto
 
-                  ${
-                    index === 0
-                      ? "md:min-h-[330px]"
-                      : "md:min-h-[330px]"
-                  }
+    ${activeIndex === index ? "md:flex-[1.65]" : "md:flex-[0.75]"}
 
-                  hover:-translate-y-1
-                  hover:scale-[1.025]
-                  hover:shadow-2xl
-                `}
+    hover:-translate-y-1
+    hover:shadow-2xl
+  `}
               >
                 <img
                   src={item.image}
                   alt={item.title}
-                  className="
+                  className={`
                     absolute
                     inset-0
                     h-full
@@ -134,10 +135,10 @@ export default function NossaHistoria() {
                     object-cover
                     transition-transform
                     duration-700
-                    ease-out
+                    ease-in-out
 
-                    group-hover:scale-110
-                  "
+    ${activeIndex === index ? "md:scale-110" : "md:scale-100"}
+  `}
                 />
 
                 <div
@@ -196,17 +197,21 @@ export default function NossaHistoria() {
 
                   <p
                     className={`
-                      mt-5
-                      text-[15px]
-                      leading-[1.35]
-                      text-white/95
+                    mt-5
+                    text-[15px]
+                    leading-[1.35]
+                    text-white/95
 
-                      ${
-                        index === 0
-                          ? "block"
-                          : "md:max-h-0 md:overflow-hidden md:opacity-0 md:transition-all md:duration-500 md:group-hover:max-h-[220px] md:group-hover:opacity-100"
-                      }
-                    `}
+                    transition-all
+                    duration-500
+                    ease-out
+
+                    ${
+                      activeIndex === index
+                        ? "md:max-h-[220px] md:translate-y-0 md:opacity-100"
+                        : "md:max-h-0 md:translate-y-3 md:overflow-hidden md:opacity-0"
+                    }
+                  `}
                   >
                     {item.description}
                   </p>

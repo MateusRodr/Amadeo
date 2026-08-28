@@ -1,7 +1,7 @@
 import { Check } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
-import plantio from "../assets/images/plantio.jpg";
+import QuemSomos from "../assets/images/02-quem-somos.png";
 import tratores from "../assets/images/tratores.jpg";
 
 function getYearsOfExperience() {
@@ -62,7 +62,6 @@ export default function SobreNos() {
           lg:gap-24
         "
       >
-        {/* Área visual */}
         <div
           className="
             relative
@@ -78,7 +77,6 @@ export default function SobreNos() {
             lg:max-w-[500px]
           "
         >
-          {/* Círculo verde */}
           <div
             className="
               absolute
@@ -98,7 +96,6 @@ export default function SobreNos() {
             aria-hidden="true"
           />
 
-          {/* Imagem grande */}
           <div
             className="
               absolute
@@ -122,7 +119,6 @@ export default function SobreNos() {
             />
           </div>
 
-          {/* Imagem pequena */}
           <div
             className="
               absolute
@@ -141,13 +137,12 @@ export default function SobreNos() {
             "
           >
             <img
-              src={plantio}
+              src={QuemSomos}
               alt={t("about.smallImageAlt")}
               className="h-full w-full object-cover"
             />
           </div>
 
-          {/* 09+ */}
           <div
             className="
               absolute
@@ -195,7 +190,6 @@ export default function SobreNos() {
           </div>
         </div>
 
-        {/* Conteúdo */}
         <div className="w-full">
           <span
             className="

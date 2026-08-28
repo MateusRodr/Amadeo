@@ -1,13 +1,20 @@
 import { useState } from "react";
-import { BrushCleaning, Sprout, Trees, Tractor, Shovel, Wheat } from "lucide-react";
+import {
+  BrushCleaning,
+  Sprout,
+  Trees,
+  Tractor,
+  Shovel,
+  Wheat,
+} from "lucide-react";
 import { useTranslation } from "react-i18next";
 
 import tratorone from "../assets/images/tratorone.png";
-import trator from "../assets/images/trator.png";
-import forest from "../assets/images/forest.jpg"
-import manejoFlorestal from "../assets/images/manejo-florestal.jpg";
-import limpeza from "../assets/images/limpeza-de-area.png"
-import agricola from "../assets/images/11-agricola-servicos.png"
+import frotas from "../assets/images/12-frotas-servicos.png";
+import forest from "../assets/images/forest.jpg";
+import newManejo from "../assets/images/10-florestal-servicos(1).png";
+import limpeza from "../assets/images/limpeza-de-area.png";
+import agricola from "../assets/images/11-agricola-servicos.png";
 
 export default function AtuacaoAltaPerformance() {
   const { t } = useTranslation("landing");
@@ -45,7 +52,7 @@ export default function AtuacaoAltaPerformance() {
       subtitle: t("services.items.forestryManagement.subtitle"),
       title: t("services.items.forestryManagement.title"),
       description: t("services.items.forestryManagement.description"),
-      image: manejoFlorestal,
+      image: newManejo,
       icon: Trees,
     },
     {
@@ -58,14 +65,14 @@ export default function AtuacaoAltaPerformance() {
       icon: Wheat,
     },
     {
-      id:"Locação de frota",
+      id: "Locação de frota",
       name: t("services.items.fleetLeasing.name"),
       subtitle: t("services.items.fleetLeasing.subtitle"),
       title: t("services.items.fleetLeasing.title"),
       description: t("services.items.fleetLeasing.description"),
-      image: trator,
+      image: frotas,
       icon: Tractor,
-    }
+    },
   ];
   const [activeServiceId, setActiveServiceId] = useState(services[0].id);
   const activeService =
@@ -184,7 +191,6 @@ export default function AtuacaoAltaPerformance() {
             })}
           </div>
 
-          {/* Card principal */}
           <div
             key={activeService.id}
             className="
@@ -217,7 +223,6 @@ export default function AtuacaoAltaPerformance() {
               "
             />
 
-            {/* Overlay */}
             <div
               className="
                 absolute

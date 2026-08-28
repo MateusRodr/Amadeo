@@ -1,12 +1,7 @@
-import {
-  Leaf,
-  RefreshCw,
-  Sprout,
-  TimerReset,
-} from "lucide-react";
+import { Leaf, RefreshCw, Sprout, TimerReset } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
-import forest from "../assets/images/forest.jpg";
+import sustentabilidade from "../assets/images/14-sustentabilidade.png";
 
 export default function Sustentabilidade() {
   const { t } = useTranslation("landing");
@@ -38,7 +33,6 @@ export default function Sustentabilidade() {
       id="sustentabilidade"
       className="relative w-full overflow-hidden bg-white"
     >
-      {/* Parte azul */}
       <div className="bg-[#004A81]">
         <div
           className="
@@ -60,7 +54,6 @@ export default function Sustentabilidade() {
             lg:pb-28
           "
         >
-          {/* Introdução */}
           <div
             className="
               text-center
@@ -118,7 +111,6 @@ export default function Sustentabilidade() {
             </p>
           </div>
 
-          {/* Itens */}
           <div className="flex flex-col gap-8 lg:gap-6">
             {sustainabilityItems.map((item) => {
               const Icon = item.icon;
@@ -191,7 +183,6 @@ export default function Sustentabilidade() {
         </div>
       </div>
 
-      {/* Parte inferior */}
       <div className="bg-white">
         <div
           className="
@@ -213,7 +204,6 @@ export default function Sustentabilidade() {
             lg:px-12
           "
         >
-          {/* Imagem */}
           <div
             className="
               relative
@@ -225,7 +215,7 @@ export default function Sustentabilidade() {
             "
           >
             <img
-              src={forest}
+              src={sustentabilidade}
               alt={t("sustainability.practice.imageAlt")}
               className="
                 h-[420px]
@@ -234,11 +224,12 @@ export default function Sustentabilidade() {
 
                 sm:h-[520px]
                 lg:h-[570px]
+
+                cursor-pointer
               "
             />
           </div>
 
-          {/* Sustentabilidade na prática */}
           <div className="pb-4 lg:pt-10">
             <span
               className="

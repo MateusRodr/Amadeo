@@ -1,25 +1,26 @@
 import { BriefcaseBusiness, UsersRound } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 import security from "../assets/images/security.png";
 
-const securityItems = [
-  {
-    title: "Processos e procedimentos",
-    description:
-      "Seguimos rigorosos processos e aplicamos boas práticas de segurança no campo.",
-    icon: UsersRound,
-    className: "bg-[#004A81]",
-  },
-  {
-    title: "Equipamentos adequados",
-    description:
-      "Fornecemos EPIs e equipamentos de qualidade, específicos para cada tipo de atividade.",
-    icon: BriefcaseBusiness,
-    className: "bg-[#65B33B]",
-  },
-];
-
 export default function SegurancaTrabalho() {
+  const { t } = useTranslation("landing");
+
+  const securityItems = [
+    {
+      title: t("workSafety.items.processes.title"),
+      description: t("workSafety.items.processes.description"),
+      icon: UsersRound,
+      className: "bg-[#004A81]",
+    },
+    {
+      title: t("workSafety.items.equipment.title"),
+      description: t("workSafety.items.equipment.description"),
+      icon: BriefcaseBusiness,
+      className: "bg-[#65B33B]",
+    },
+  ];
+
   return (
     <section
       id="seguranca"
@@ -37,7 +38,6 @@ export default function SegurancaTrabalho() {
             lg:gap-12
           "
         >
-          {/* Imagem */}
           <div
             className="
               order-2
@@ -50,24 +50,22 @@ export default function SegurancaTrabalho() {
           >
             <img
               src={security}
-              alt="Profissional da Amadeo em área florestal"
+              alt={t("workSafety.imageAlt")}
               className="
                 h-[360px]
                 w-full
+                cursor-pointer
                 object-cover
 
                 sm:h-[440px]
                 lg:h-[500px]
-                
-                cursor-pointer
               "
             />
           </div>
 
-          {/* Texto */}
           <div className="order-1 lg:order-2">
             <span className="text-[15px] font-semibold text-[#65B33B]">
-              Segurança do trabalho
+              {t("workSafety.eyebrow")}
             </span>
 
             <h2
@@ -84,7 +82,7 @@ export default function SegurancaTrabalho() {
                 lg:text-[44px]
               "
             >
-              Segurança presente em todas as etapas dos nossos serviços
+              {t("workSafety.title")}
             </h2>
 
             <p
@@ -98,13 +96,10 @@ export default function SegurancaTrabalho() {
                 sm:text-[16px]
               "
             >
-              Acreditamos que trabalho seguro é trabalho bem feito! Buscamos
-              garantir um ambiente seguro, saudável e em conformidade com as
-              normas, protegendo o que temos de mais importante: nossa equipe.
+              {t("workSafety.description")}
             </p>
           </div>
 
-          {/* Cards */}
           <div
             className="
               order-3
@@ -147,7 +142,9 @@ export default function SegurancaTrabalho() {
                     <Icon size={19} strokeWidth={2} />
                   </span>
 
-                  <h3 className="text-[16px] font-semibold">{item.title}</h3>
+                  <h3 className="text-[16px] font-semibold">
+                    {item.title}
+                  </h3>
 
                   <p className="mt-2 text-[14px] leading-[1.35] text-white/95">
                     {item.description}

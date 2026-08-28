@@ -1,9 +1,9 @@
 import { ChartNoAxesCombined, Sprout, Truck, UsersRound } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
-import imageOne from "../assets/images/tratorone.png";
-import imageTwo from "../assets/images/trator.png";
-import imageThree from "../assets/images/tratores.jpg";
+import imageOne from "../assets/images/15-diferenciais.png";
+import imageTwo from "../assets/images/16-diferenciais1.png";
+import imageThree from "../assets/images/17-diferenciais.png";
 
 export default function Diferenciais() {
   const { t } = useTranslation("landing");
@@ -60,7 +60,6 @@ export default function Diferenciais() {
       "
     >
       <div className="mx-auto w-full max-w-[1180px]">
-        {/* Cabeçalho */}
         <div
           className="
             mb-14
@@ -117,7 +116,6 @@ export default function Diferenciais() {
           </p>
         </div>
 
-        {/* Diferenciais */}
         <div
           className="
             grid
@@ -176,7 +174,6 @@ export default function Diferenciais() {
           })}
         </div>
 
-        {/* Imagens */}
         <div
           className="
             relative
@@ -211,8 +208,6 @@ export default function Diferenciais() {
           ))}
         </div>
       </div>
-
-      {/* Espaço inferior somente da seção */}
       <div className="h-8 md:h-10" />
     </section>
   );

@@ -1,7 +1,5 @@
 import { useTranslation } from "react-i18next";
 
-import forestBackground from "../assets/images/manejo-florestal.jpg";
-
 export default function ComoTrabalhamos() {
   const { t } = useTranslation("landing");
   const steps = [
@@ -175,10 +173,7 @@ export default function ComoTrabalhamos() {
           {/* Mobile */}
           <div className="mt-12 flex flex-col md:hidden">
             {steps.map((step, index) => (
-              <article
-                key={step.number}
-                className="relative pb-14 pl-0"
-              >
+              <article key={step.number} className="relative pb-14 pl-0">
                 <div className="relative">
                   <span
                     className="
@@ -261,21 +256,6 @@ export default function ComoTrabalhamos() {
           bg-[#004A81]
         "
       >
-        <img
-          src={forestBackground}
-          alt=""
-          aria-hidden="true"
-          className="
-            pointer-events-none
-            absolute
-            inset-0
-            h-full
-            w-full
-            object-cover
-            opacity-20
-          "
-        />
-
         <div
           className="
             absolute
