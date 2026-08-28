@@ -7,7 +7,7 @@ import grow from "../assets/images/06-crescecmos-nossa-historia.png";
 
 export default function NossaHistoria() {
   const { t } = useTranslation("landing");
-  const [activeIndex, setActiveIndex] = useState(1);
+  const [activeIndex, setActiveIndex] = useState(0);
 
   const historyItems = [
     {
