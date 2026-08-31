@@ -31,9 +31,7 @@ export default async function handler(
     const { data, error } = await resend.emails.send({
       from: 'Amadeo <onboarding@resend.dev>',
 
-      // Temporário para testes.
-      // Depois trocar pelos e-mails oficiais da Amadeo.
-      to: ['karen@amadeoagroflorestal.com.br'],
+      to: ['amadeo@amadeoagroflorestal.com.br'],
 
       replyTo: email,
 

@@ -7,7 +7,7 @@ export default function AmadeoHero() {
   const { t } = useTranslation("landing");
 
   const whatsappUrl =
-    "https://wa.me/556798329788?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es";
+    "https://wa.me/5567999569985?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es";
 
   return (
     <section
