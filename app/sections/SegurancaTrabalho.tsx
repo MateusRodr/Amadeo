@@ -1,4 +1,4 @@
-import { BriefcaseBusiness, UsersRound } from "lucide-react";
+import { BriefcaseBusiness, Shield, UsersRound } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
 import security from "../assets/images/security.png";
@@ -12,12 +12,21 @@ export default function SegurancaTrabalho() {
       description: t("workSafety.items.processes.description"),
       icon: UsersRound,
       className: "bg-[#004A81]",
+      iconClassName: "bg-[#65B33B]",
     },
     {
       title: t("workSafety.items.equipment.title"),
       description: t("workSafety.items.equipment.description"),
       icon: BriefcaseBusiness,
       className: "bg-[#65B33B]",
+      iconClassName: "bg-[#004A81]",
+    },
+    {
+      title: t("workSafety.items.risks.title"),
+      description: t("workSafety.items.risks.description"),
+      icon: Shield,
+      className: "bg-[#004A81]",
+      iconClassName: "bg-[#65B33B]",
     },
   ];
 
@@ -48,6 +57,19 @@ export default function SegurancaTrabalho() {
               lg:row-span-2
             "
           >
+            <div
+              className="
+                  order-3
+                  grid
+                  grid-cols-1
+                  gap-4
+
+                  sm:grid-cols-3
+                  lg:grid-cols-3
+                  lg:-ml-24
+                  lg:mt-2
+                "
+            ></div>
             <img
               src={security}
               alt={t("workSafety.imageAlt")}
@@ -107,7 +129,7 @@ export default function SegurancaTrabalho() {
               grid-cols-1
               gap-4
 
-              sm:grid-cols-2
+              sm:grid-cols-3
               lg:-ml-24
               lg:mt-2
             "
@@ -127,7 +149,7 @@ export default function SegurancaTrabalho() {
                   `}
                 >
                   <span
-                    className="
+                    className={`
                       mb-5
                       flex
                       h-10
@@ -135,16 +157,14 @@ export default function SegurancaTrabalho() {
                       items-center
                       justify-center
                       rounded-xl
-                      bg-[#65B33B]
                       text-white
-                    "
+                      ${item.iconClassName}
+                    `}
                   >
                     <Icon size={19} strokeWidth={2} />
                   </span>
 
-                  <h3 className="text-[16px] font-semibold">
-                    {item.title}
-                  </h3>
+                  <h3 className="text-[16px] font-semibold">{item.title}</h3>
 
                   <p className="mt-2 text-[14px] leading-[1.35] text-white/95">
                     {item.description}

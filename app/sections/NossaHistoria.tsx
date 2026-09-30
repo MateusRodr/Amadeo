@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { House, Lightbulb, Sprout } from "lucide-react";
 import { useTranslation } from "react-i18next";
-import start from "../assets/images/05-comeco-nossa-historia.png";
+import begin from "../assets/images/begin.png";
 import historia from "../assets/images/2013.png";
 import grow from "../assets/images/06-crescecmos-nossa-historia.png";
 
@@ -19,7 +19,7 @@ export default function NossaHistoria() {
     {
       title: t("history.items.beginning.title"),
       description: t("history.items.beginning.description"),
-      image: start,
+      image: begin,
       icon: Sprout,
     },
     {

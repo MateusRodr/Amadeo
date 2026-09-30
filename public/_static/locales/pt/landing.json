@@ -111,6 +111,10 @@
       "equipment": {
         "title": "Equipamentos adequados",
         "description": "Fornecemos EPIs e equipamentos de qualidade, específicos para cada tipo de atividade."
+      },
+      "risks": {
+        "title": "Gerenciamento de riscos",
+        "description": "Para nós, a NR-01 não é apenas uma norma: é o cuidado real com quem constrói o nosso caminho."
       }
     }
   },
